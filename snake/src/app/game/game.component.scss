@@ -1,0 +1,33 @@
+
+// ngx-snake {
+//     &.black-and-white{
+//         ngx-snake-tile {
+//             background: #000;
+//             &.free {
+//                 div {
+//                     background: #000;
+//                 }
+//             }
+
+//             &.head,
+//             &.tail,
+//             &.food,
+//             &.body {
+//                 div {
+//                     background: #000000;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+ngx-snake {
+    ngx-snake-tile {
+        background: #ffffff;
+        &.free {
+            div {
+                background: #ffffff;
+            }
+        }
+    }
+}

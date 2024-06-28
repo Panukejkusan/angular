@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+ngx-snake {
+    &.black-and-white{
+        ngx-snake-tile {
+            background: #000;
+            &.free {
+                div {
+                    background: #000;
+                }
+            }
+
+            &.head,
+            &.tail,
+            &.food,
+            &.body {
+                div {
+                    background: #000000;
+                }
+            }
+        }
+    }
+}

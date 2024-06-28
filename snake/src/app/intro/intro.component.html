@@ -1,0 +1,51 @@
+<h1>Player Form</h1>
+<h3>Welcome to the snake game! Please fill in the player form.</h3>
+<form [formGroup]="userForm"
+(submit)="onSubmit(userForm)">
+    Player Name
+    <input type="text"
+        formControlName ="userName" />
+    <span *ngIf="userForm.controls['userName'].touched && userForm.controls.userName.invalid">
+        Bad username
+    </span>
+    <!-- <input name="name" #nameModel="ngModel"
+        required
+        minlength="3"
+        ngModel/> -->
+    <!-- <p *ngIf="nameModel.touched && nameModel.invalid" class="error">  
+        at least 3 chars long
+    </p> -->
+    <br/>
+    Email
+    <input type="email"
+        formControlName="email"/>
+    <span *ngIf="userForm.controls['email'].touched && userForm.controls.email.invalid">
+        Bad email
+    </span>
+    <!-- <input name="email" #emailModel="ngModel"
+        required
+        type="email"
+        ngModel
+        email/> -->
+    <!-- <p *ngIf="emailModel.touched && emailModel.invalid" class="error">  
+        incorrect email
+    </p> -->
+    <br/>
+    <!-- Translated
+    <input name="translated"
+        ngModel #translatedModel="ngModel"
+        type="checkbox"/> -->
+    <!-- @if (translatedModel.value) {
+    <select>
+    <option>Polski</option>
+    <option>English</option>
+    <option>Deutsh</option>
+    </select>
+    } -->
+    <button [disabled]="!userForm.valid">Subscribe</button>
+    <!-- <button [disabled]="form.invalid"
+    (click)="start(form.form.value)">
+    Start
+    </button> -->
+
+</form>

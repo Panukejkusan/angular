@@ -1,0 +1,7 @@
+<select #sort (change)="changeSort(sort.value)"> 
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<div *ngFor="let score of highscores;">
+    <p>{{score.userName}} {{score.score}}</p>    
+</div>

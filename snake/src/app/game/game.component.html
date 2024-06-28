@@ -1,0 +1,35 @@
+<h1>Welcome, {{player?.userName}}</h1>
+
+<button 
+    (click)="exit()">
+    Exit
+</button>
+
+<br>
+<h2>Points: {{points}}</h2>
+<br>
+<h2>Time: {{time | time}}</h2>
+<br>
+<h2>Status: {{status}}</h2>
+
+<ngx-snake #game 
+    (foodEaten)="foodEaten($event)"
+    (gameOver)="gameOver($event)">
+</ngx-snake>
+
+<br>
+
+<button (click)="startGame()">Start</button>
+<button (click)="stopGame()">Stop</button>
+<button (click)="game.actionUp()">Up</button>
+<button (click)="game.actionLeft()">Left</button>
+<button (click)="game.actionRight()">Right</button>
+<button (click)="game.actionDown()">Down</button>
+
+<button 
+    (click)="navigateToHighscores()">
+    Scores
+</button>
+
+<!-- <br>
+<app-highscores></app-highscores> -->
